@@ -38,7 +38,6 @@ class HrManagerController extends Controller
         if ($validator->fails()) {
             return response()->json(['message' => $validator->errors()], 400);
         }else{
-            // print_r($request->job_title);die;
             return ["Employee"=>Employee::create([
                 "name"=>$request->name,
                 "email"=>$request->email,
